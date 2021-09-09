@@ -6,9 +6,11 @@ function countWord(string $phrase): int {
     $words = explode(' ', $phrase);
 
     foreach ($words as $word) {
-        $counter++;
+        if (preg_match('/\w/', $word)) {
+            $counter++;
+        }
     }
-    
+
     return $counter;
 }
 
