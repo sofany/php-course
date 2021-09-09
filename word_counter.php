@@ -5,7 +5,11 @@ function countWord(string $phrase): int {
     $counter = 0;
     $words = explode(' ', $phrase);
 
-    return count($words);
+    foreach ($words as $word) {
+        $counter++;
+    }
+    
+    return $counter;
 }
 
 function display(string $phrase): void {
